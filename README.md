@@ -15,15 +15,20 @@ in this repository we use local registery if you want change it to your private 
 ```
 sed -i 's/localhub.etod.me/<ENTER_YOUR_REGISTRY_URL_HERE>/g' docker-compose.yml register.sh
 ```
-
 ### Step 3
+up
+```
+docker-compose up -d
+```
+
+### Step 4
 #### Register Runner
 run following command to register your runners
 ```
 bash register.sh
 ```
 
-### Step 4
+### Step 5
 #### Complete ASK Questions
 ```
 1. host -> http://git.mobtaker.local
