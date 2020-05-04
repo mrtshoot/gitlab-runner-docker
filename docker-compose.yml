@@ -1,0 +1,21 @@
+---
+version: "3"
+services:
+
+  gitlab-runner:
+    image: localhub.etod.me/gitlab/gitlab-runner:v12.8.0
+    container_name: gitlab-runner
+    restart: unless-stopped
+    networks:
+      - gitlab-runner
+    volumes:
+      - /srv/gitlab-runner/config:/etc/gitlab-runner
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /etc/hosts:/etc/hosts:ro
+
+networks:
+  gitlab-runner:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.28.10.0/24
