@@ -3,7 +3,7 @@ version: "3"
 services:
 
   gitlab-runner:
-    image: localhub.etod.me/gitlab/gitlab-runner:v12.8.0
+    image: remotehub.etod.me/gitlab/gitlab-runner:v12.8.0
     container_name: gitlab-runner
     restart: unless-stopped
     networks:
@@ -12,6 +12,7 @@ services:
       - /srv/gitlab-runner/config:/etc/gitlab-runner
       - /var/run/docker.sock:/var/run/docker.sock
       - /etc/hosts:/etc/hosts:ro
+      - ./.ssh:/root/.ssh
 
 networks:
   gitlab-runner:
