@@ -4,7 +4,7 @@
 #### Clone Source of gitlab-runner
 its best execute your project under opt directory and clone this repository and go to repository root directory.
 ```
-cd /opt;git clone http://git.mobtaker.local/mobtaker/gitlab-runner.git;cd gitlab-runner
+cd /opt;git clone git@git.mobtakerteam.com:devops/gitlab-runner-docker.git;cd gitlab-runner
 ```
 ##### Notice
 if you do not forced you never update gitlab-runner:latest and use stable image 12.8.0
